@@ -1,6 +1,6 @@
 <template>
   <div class="node-group">
-    <div class="group" v-for="node in nodes">
+    <div class="group" v-for="node in NODE_GROUP">
       <div class="group-title">{{ node.title }}</div>
       <div
         class="group-item"
@@ -14,12 +14,8 @@
 </template>
 
 <script setup lang="ts">
-  import { nodes } from '../graph/nodes'
-
-  export interface NodeItem {
-    type: 'task' | 'function' | 'push' | string
-    label: string
-  }
+  import { NODE_GROUP } from '@/constants/index'
+  import { NodeItem } from '@/types'
 
   const emit = defineEmits<{
     (type: 'addNode', v: NodeItem, e: MouseEvent): void

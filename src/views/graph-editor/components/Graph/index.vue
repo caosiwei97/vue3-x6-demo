@@ -1,8 +1,8 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Graph">
   import { Graph } from '@antv/x6'
   import { Snapline } from '@antv/x6-plugin-snapline'
   import { onMounted, ref } from 'vue'
-  import { NodeItem } from './NodeGroup.vue'
+  import { NodeItem } from '../../components/NodeGroup/index.vue'
   import { Dnd } from '@antv/x6-plugin-dnd'
 
   const data = {
