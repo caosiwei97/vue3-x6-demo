@@ -1,4 +1,11 @@
-import { NODE_GROUP } from '@/constants'
+import { NODE_TYPE } from '@/constants'
 
-export type NodeGroup = typeof NODE_GROUP[number]
-export type NodeItem = NodeGroup['childNodes'][number]
+export interface NodeGroup {
+  title: string
+  childNodes: NodeItem[]
+}
+
+export interface NodeItem {
+  type: NODE_TYPE
+  label: string
+}
