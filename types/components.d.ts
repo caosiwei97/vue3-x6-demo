@@ -7,13 +7,23 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    App: typeof import('./../src/App.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMain: typeof import('element-plus/es')['ElMain']
+    ElProgress: typeof import('element-plus/es')['ElProgress']
+    FunctionNode: typeof import('./../src/views/graph-editor/components/Graph/core/node/function/FunctionNode.vue')['default']
     Graph: typeof import('./../src/views/graph-editor/components/Graph/index.vue')['default']
+    GraphEditor: typeof import('./../src/views/graph-editor/index.vue')['default']
+    IEpAddLocation: typeof import('~icons/ep/add-location')['default']
+    IEpAlarmClock: typeof import('~icons/ep/alarm-clock')['default']
+    Node: typeof import('./../src/views/graph-editor/components/Graph/core/node/Node.vue')['default']
     NodeGroup: typeof import('./../src/views/graph-editor/components/NodeGroup/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TaskNode: typeof import('./../src/views/graph-editor/components/Graph/core/node/task/TaskNode.vue')['default']
+    Views: typeof import('./../src/views/index.vue')['default']
   }
 }

@@ -1,9 +1,9 @@
-import { registerTaskNode } from './task'
-import { registerFunctionNode } from './function'
-import { registerPushNode } from './push'
+import { registerTaskShape } from './task'
+import { registerFunctionShape } from './function'
+import { registerPushShape } from './push'
 
-export const registerNode = (Graph: GraphType) => {
-  registerTaskNode(Graph)
-  registerFunctionNode(Graph)
-  registerPushNode(Graph)
+export const registerShape = () => {
+  registerTaskShape()
+  registerFunctionShape()
+  registerPushShape()
 }

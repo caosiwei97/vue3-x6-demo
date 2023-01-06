@@ -5,7 +5,8 @@
       "element-plus/global",
       "vite/client",
       "vite-plugin-pages/client",
-      "@types/node"
+      "@types/node",
+      "unplugin-icons/types/vue"
     ],
     "useDefineForClassFields": true,
     "module": "ESNext",

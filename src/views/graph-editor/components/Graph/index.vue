@@ -6,6 +6,7 @@
   let graph: Nullable<InstanceType<GraphType>> = null
 
   onMounted(() => {
+    // todo 加载画布数据
     graph = initGraph({
       container: containerRef!,
     })
@@ -13,10 +14,10 @@
 
   function addNode(item: NodeItem, e: MouseEvent) {
     const node = graph?.createNode({
-      shape: 'rect',
-      width: 100,
-      height: 40,
-      label: item.label,
+      shape: item.type,
+      data: {
+        ...item
+      }
     })
 
     graph?.dnd?.start(node!, e)
