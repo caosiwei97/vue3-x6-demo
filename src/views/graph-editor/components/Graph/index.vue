@@ -1,6 +1,6 @@
 <script setup lang="ts" name="Graph">
   import { NodeItem } from '@/types'
-  import { initGraph } from './core/instance/init'
+  import { initGraph } from './core'
 
   const containerRef = $ref<Nullable<HTMLDivElement>>(null)
   let graph: Nullable<InstanceType<GraphType>> = null
@@ -22,6 +22,8 @@
 
     graph?.dnd?.start(node!, e)
   }
+
+  function addPorts() {}
 
   defineExpose({
     addNode,

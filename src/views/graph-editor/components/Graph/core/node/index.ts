@@ -1,9 +1,9 @@
-import { registerTaskShape } from './task'
-import { registerFunctionShape } from './function'
-import { registerPushShape } from './push'
+import { registerTaskNode } from './task'
+import { registerFunctionNode } from './function'
+import { registerPushNode } from './push'
 
-export const registerShape = () => {
-  registerTaskShape()
-  registerFunctionShape()
-  registerPushShape()
+export const registerNode = () => {
+  registerTaskNode()
+  registerFunctionNode()
+  registerPushNode()
 }

@@ -1,21 +1,19 @@
 import { Graph } from '@antv/x6'
 import '@antv/x6-vue-shape'
-import { registerShape } from '../node'
-import { initPlugin } from '../plugin'
 
-export const createGraphInstance = (options: GraphOptions = {}) => {
+export const createInstance = (options: GraphOptions = {}) => {
   const defaultGraphOptions: GraphOptions = {
     panning: true,
     mousewheel: true,
     background: {
-      color: '#ddd',
+      color: '#e0e0e0',
     },
     grid: {
       visible: true,
       type: 'fixedDot',
       args: [
         {
-          color: 'orange', // 主网格线颜色
+          color: '#fff', // 主网格线颜色
           thickness: 2, // 主网格线宽度
         },
         {
@@ -35,11 +33,4 @@ export const createGraphInstance = (options: GraphOptions = {}) => {
   return graphInstance
 }
 
-export const initGraph = (options: GraphOptions = {}) => {
-  registerShape(Graph)
 
-  const graph = createGraphInstance(options)
-  initPlugin(graph)
-
-  return graph
-}
