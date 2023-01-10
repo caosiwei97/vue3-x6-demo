@@ -1,7 +1,7 @@
-import { NODE_TYPE } from '@/constants'
-import { register } from "@antv/x6-vue-shape";
-import { ports } from '../../common/ports';
-import Node from '../../common/CommonNode.vue';
+import { NODE_LABEL, NODE_TYPE } from '@/constants'
+import { register } from '@antv/x6-vue-shape'
+import { ports } from '../../common/ports'
+import Node from '../../common/CommonNode.vue'
 
 export function registerTaskNode() {
   register({
@@ -10,5 +10,9 @@ export function registerTaskNode() {
     height: 32,
     component: Node,
     ports: { ...ports },
+    data: {
+      type: NODE_TYPE.task,
+      label: NODE_LABEL[NODE_TYPE.task]
+    },
   })
 }

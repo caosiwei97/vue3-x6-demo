@@ -15,9 +15,6 @@
   function addNode(item: NodeItem, e: MouseEvent) {
     const node = graph?.createNode({
       shape: item.type,
-      data: {
-        ...item
-      }
     })
 
     graph?.dnd?.start(node!, e)
