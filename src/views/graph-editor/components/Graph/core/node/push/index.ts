@@ -12,7 +12,10 @@ export function registerPushNode() {
     ports: { ...ports },
     data: {
       type: NODE_TYPE.push,
-      label: NODE_LABEL[NODE_TYPE.push]
+      label: NODE_LABEL[NODE_TYPE.push],
+      ports: {
+        group: 'left',
+      },
     }
   })
 }

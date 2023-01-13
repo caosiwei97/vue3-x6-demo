@@ -1,5 +1,6 @@
 <script setup lang="ts" name="Graph">
   import { NodeItem } from '@/types'
+  import { Node } from '@antv/x6';
   import { initGraph } from './core'
 
   const containerRef = $ref<Nullable<HTMLDivElement>>(null)
@@ -17,10 +18,15 @@
       shape: item.type,
     })
 
+    addPort(node!)
+
     graph?.dnd?.start(node!, e)
   }
 
-  function addPorts() {}
+  function addPort(node: Node) {
+    const { ports } =  node?.getData()
+    ports && node.addPort(ports)
+  }
 
   defineExpose({
     addNode,

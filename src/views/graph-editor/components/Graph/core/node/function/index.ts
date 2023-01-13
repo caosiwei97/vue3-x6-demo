@@ -12,7 +12,10 @@ export function registerFunctionNode() {
     ports: { ...ports },
     data: {
       type: NODE_TYPE.function,
-      label: NODE_LABEL[NODE_TYPE.function]
+      label: NODE_LABEL[NODE_TYPE.function],
+      ports: {
+        group: 'left',
+      },
     }
   })
 }

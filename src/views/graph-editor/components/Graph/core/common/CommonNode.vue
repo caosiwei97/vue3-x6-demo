@@ -12,7 +12,6 @@
 
   onMounted(() => {
     data = node.getData()
-    console.log(node);
   })
 </script>
 
