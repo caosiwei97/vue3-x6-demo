@@ -24,6 +24,7 @@ declare module '@vue/runtime-core' {
     NodeGroup: typeof import('./../src/views/graph-editor/components/NodeGroup/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./../src/views/graph-editor/components/Sidebar/index.vue')['default']
     TaskNode: typeof import('./../src/views/graph-editor/components/Graph/core/node/task/TaskNode.vue')['default']
     Toolbar: typeof import('./../src/views/graph-editor/components/Toolbar/index.vue')['default']
     Views: typeof import('./../src/views/index.vue')['default']
