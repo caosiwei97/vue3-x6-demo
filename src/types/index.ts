@@ -12,11 +12,34 @@ export interface NodeItem {
 
 export interface NodeData {
   /** 节点类型 */
-  type: NODE_TYPE;
+  type: NODE_TYPE
 
   /** 节点标签文本 */
-  label: string;
+  label: string
 
   /** 节点 icon */
-  icon: string;
+  icon: string
+}
+
+export type CmdKey =
+  | 'undo'
+  | 'redo'
+  | 'check'
+  | 'issue'
+  | 'save'
+  | 'revert'
+  | 'exit'
+
+export interface CmdConfig {
+  key: CmdKey
+
+  title: string
+
+  icon: string
+
+  handler: Function
+
+  disabled?: boolean | (() => boolean)
+
+  showDividerBebind?: boolean
 }

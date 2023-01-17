@@ -20,7 +20,7 @@ declare module '@vue/runtime-core' {
     GraphEditor: typeof import('./../src/views/graph-editor/index.vue')['default']
     IEpAddLocation: typeof import('~icons/ep/add-location')['default']
     IEpAlarmClock: typeof import('~icons/ep/alarm-clock')['default']
-    Node: typeof import('../src/views/graph-editor/components/Graph/core/common/CommonNode.vue['default']
+    Node: typeof import('./../src/views/graph-editor/components/Graph/core/node/function/Node.vue')['default']
     NodeGroup: typeof import('./../src/views/graph-editor/components/NodeGroup/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
