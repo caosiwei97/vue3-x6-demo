@@ -1,4 +1,4 @@
-export const initEvents = (graph: InstanceType<GraphType>) => {
+export const initEvents = (graph: GraphType) => {
   graph.on('node:click', (args) => {
     console.log('开始处理节点点击行为...');
     console.log('节点自身的一些逻辑判断...');

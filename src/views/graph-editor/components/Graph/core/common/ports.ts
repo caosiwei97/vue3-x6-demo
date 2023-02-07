@@ -29,5 +29,15 @@ export const ports: Partial<PortManager.Metadata> | PortManager.PortMetadata[] =
           position: 'left',
         },
       },
+      functionPort: {
+        position: 'functionPort',
+        attrs: {
+          circle: {
+            magnet: true,
+            stroke: '#3662EC',
+            r: 6,
+          },
+        },
+      }
     },
   }

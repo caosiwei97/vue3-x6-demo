@@ -13,9 +13,11 @@ export function registerTaskNode() {
     data: {
       type: NODE_TYPE.task,
       label: NODE_LABEL[NODE_TYPE.task],
-      ports: {
-        group: 'right',
-      },
+      ports: [
+        {
+          group: 'right',
+        },
+      ],
     },
   })
 }

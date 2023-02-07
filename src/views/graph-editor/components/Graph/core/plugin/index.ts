@@ -1,7 +1,7 @@
 import { initDndPlugin } from './dnd'
 import { initSnaplinePlugin } from './snapline'
 
-export const initPlugin = (graph: InstanceType<GraphType>) => {
+export const initPlugin = (graph: GraphType) => {
   const plugins = [initSnaplinePlugin]
 
   plugins.forEach((plugin) => {

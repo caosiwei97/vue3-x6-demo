@@ -4,7 +4,7 @@
   import { initGraph } from './core'
 
   const containerRef = $ref<Nullable<HTMLDivElement>>(null)
-  let graph: Nullable<InstanceType<GraphType>> = null
+  let graph: Nullable<GraphType> = null
 
   onMounted(() => {
     // todo 加载画布数据
@@ -25,7 +25,8 @@
 
   function addPort(node: Node) {
     const { ports } =  node?.getData()
-    ports && node.addPort(ports)
+    
+    ports && node.addPorts(ports)
   }
 
   defineExpose({

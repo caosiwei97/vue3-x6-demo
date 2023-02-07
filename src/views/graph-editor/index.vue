@@ -15,7 +15,7 @@
       <el-header class="header">工具栏</el-header>
       <el-container>
         <el-aside class="aside">
-          <node-group @add-node="addNode" />
+          <sidebar @add-node="addNode" />
         </el-aside>
         <el-main class="main">
           <graph ref="graph" />

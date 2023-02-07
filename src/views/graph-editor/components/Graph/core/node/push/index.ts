@@ -1,7 +1,7 @@
 import { NODE_LABEL, NODE_TYPE } from '@/constants'
-import { register } from "@antv/x6-vue-shape";
-import { ports } from '../../common/ports';
-import Node from '../../common/CommonNode.vue';
+import { register } from '@antv/x6-vue-shape'
+import { ports } from '../../common/ports'
+import Node from '../../common/CommonNode.vue'
 
 export function registerPushNode() {
   register({
@@ -13,9 +13,11 @@ export function registerPushNode() {
     data: {
       type: NODE_TYPE.push,
       label: NODE_LABEL[NODE_TYPE.push],
-      ports: {
-        group: 'left',
-      },
-    }
+      ports: [
+        {
+          group: 'left',
+        },
+      ],
+    },
   })
 }

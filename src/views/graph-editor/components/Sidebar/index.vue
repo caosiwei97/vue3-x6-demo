@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-  import { NODE_GROUP } from '@/constants/index'
+  import { NODE_GROUP } from '@/constants'
   import { NodeItem } from '@/types'
 
   const emit = defineEmits<{

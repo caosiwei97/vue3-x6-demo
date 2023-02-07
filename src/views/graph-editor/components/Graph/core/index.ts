@@ -2,10 +2,10 @@ import { createInstance } from './instance'
 import { initEvents } from './events'
 import { initPlugin } from './plugin'
 import { registerNode } from './node'
-import { registerEdge } from './edge'
+import { registerLayout } from './layout'
 
+registerLayout()
 registerNode()
-registerEdge()
 
 export const initGraph = (options: GraphOptions = {}) => {
   const graph = createInstance(options)
